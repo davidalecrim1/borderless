@@ -2,7 +2,7 @@
 
 **Time box:** 15 minutes
 **Mode:** hand-written. No AI, no autocomplete. Documentation search only.
-**Language:** any language you are comfortable with.
+**Language:** any. Use what you are most comfortable with.
 
 ## Problem
 

@@ -2,6 +2,9 @@
 
 Mock interviews for Brazilian developers preparing for the international market.
 
+All challenges are language-agnostic. The candidate picks the language; the interviewer scores the
+reasoning, not the syntax.
+
 ## Structure
 
 ```

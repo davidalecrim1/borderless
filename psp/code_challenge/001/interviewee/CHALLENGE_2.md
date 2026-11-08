@@ -2,10 +2,11 @@
 
 **Time box:** 30 minutes
 **Mode:** AI-assisted. The design is yours; the AI writes the code.
+**Language:** any.
 
 ## Context
 
-You are joining a company with dozens of Go microservices. Every service exposes HTTP APIs and
+You are joining a company with dozens of microservices. Every service exposes HTTP APIs and
 authenticates requests with a JWT. Product wants one rate limiting package that every team can
 import, instead of each service rolling its own.
 

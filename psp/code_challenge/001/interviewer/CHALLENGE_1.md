@@ -2,6 +2,7 @@
 
 **Time box:** 15 minutes
 **Mode:** hand-written. No AI, no autocomplete. Documentation search only.
+**Language:** any. The choice is not scored.
 
 ## Problem
 
@@ -34,6 +35,7 @@ no code generators, no LLM. State this up front and let them manage their own ta
 ### What you are evaluating
 
 - Do they restate the problem and its edge cases before typing?
+- Language choice does not matter. Depth in whichever language they pick does.
 - Do they choose between hash set and sort-and-count, and can they justify it?
 - Do they write the example down and trace it by hand?
 - Do they notice the constraint about the caller reusing `nums`?
