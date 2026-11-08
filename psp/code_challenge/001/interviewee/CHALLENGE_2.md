@@ -2,7 +2,6 @@
 
 **Time box:** 30 minutes
 **Mode:** AI-assisted. The design is yours; the AI writes the code.
-**Language:** any.
 
 ## Context
 
