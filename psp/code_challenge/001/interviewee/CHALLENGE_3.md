@@ -1,7 +1,7 @@
 # Challenge 03 — Text Formatter
 
 **Time box:** 35 minutes
-**Mode:** AI-assisted. You drive; the assistant types.
+**Mode:** hand-written. No AI, no autocomplete, no internet.
 
 ## Task
 
@@ -17,8 +17,7 @@ São Paulo's cluster — the one in us-east-1  — stayed green. Rollback window
 ## Rules
 
 - Ask questions before writing anything.
-- You choose the algorithm. The assistant only writes the code you ask for.
-- You are responsible for every line that lands in the file.
+- You choose the algorithm.
 
 ## Deliverables
 

@@ -1,4 +1,4 @@
-# Borderless
+# borderless
 
 Mock interviews for Brazilian developers preparing for the international market.
 
@@ -13,5 +13,5 @@ psp/code_challenge/<session>/
 | Session | Challenge | Format                                        |
 | ------- | --------- | --------------------------------------------- |
 | 001     | 1         | Hand-written. Distinct elements.              |
-| 001     | 2         | Design-first. Rate limiter package.           |
-| 001     | 3         | AI-assisted. Text formatter.                  |
+| 001     | 2         | AI-assisted. Rate limiter package.            |
+| 001     | 3         | Hand-written. Text formatter.                 |

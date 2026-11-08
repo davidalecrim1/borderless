@@ -1,7 +1,7 @@
 # Challenge 03 — Text Formatter (Interviewer)
 
 **Time box:** 35 minutes
-**Mode:** AI-assisted. The candidate drives; the assistant types.
+**Mode:** hand-written. No AI, no autocomplete, no internet.
 
 ## Task
 
@@ -17,8 +17,7 @@ São Paulo's cluster — the one in us-east-1  — stayed green. Rollback window
 ## Rules
 
 - Ask questions before writing anything.
-- The candidate chooses the algorithm. The assistant only writes the code they ask for.
-- The candidate is responsible for every line that lands in the file.
+- The candidate chooses the algorithm.
 
 ## Deliverables
 
@@ -33,13 +32,14 @@ São Paulo's cluster — the one in us-east-1  — stayed green. Rollback window
 ### What this challenge measures
 
 Not the formatter. It measures whether the candidate can decompose an ambiguous requirement,
-decide an algorithm, and supervise an AI that will confidently produce something wrong.
+decide an algorithm, and carry the edge cases through to working code without leaning on anyone
+else's judgement.
 
 ### The gate
 
-The session must start with questions. A prompt like "write a function that wraps text at 30
-characters" in the first two minutes is an automatic fail for this phase, no matter how good the
-output is. If it happens, stop them and ask: "Before you prompt, what is still undefined?"
+The session must start with questions. If the candidate starts typing in the first two minutes
+without asking what a "line" or a "character" means, stop them and ask: "Before you type, what is
+still undefined?" Their answer to that question is the first data point of the session.
 
 ### Requirements the candidate should surface
 
@@ -53,7 +53,7 @@ output is. If it happens, stop them and ask: "Before you prompt, what is still u
 - Is exactly 30 allowed, or must every line be strictly shorter?
 - What is the output: string, slice of lines, file?
 
-Anything they leave undefined is a decision the AI will silently make for them.
+Anything they leave undefined becomes a decision they make silently while coding.
 
 ### The traps in the fixture
 
@@ -79,15 +79,15 @@ The candidate must choose and defend one:
 Ask "why" for whichever they pick. Greedy is almost always the right call here; the reasoning is
 what is being graded, not the choice.
 
-### AI supervision
+### Verification
 
-- Did they give the assistant the constraints before generating, or did they generate first and
-  patch later?
-- Did they read the generated code, or run it straight away?
-- Did they catch the typical failures: `len(s)` on a string in Go, `textwrap.wrap` defaults in
-  Python with `break_long_words=True`, `String.length()` versus code points in Java?
-- Ask them to trace one output line by hand, character by character, and confirm the count.
-- Ask what they would test first and which case they would expect to fail.
+There is no test framework in the session. The candidate should still prove the output:
+
+- Trace one output line by hand, character by character, and confirm the count.
+- Run the fixture through their code before claiming it works.
+- State which case they expect to fail, if any.
+
+A candidate who says "it looks right" without executing or tracing has not finished.
 
 ### Follow-ups
 
@@ -100,11 +100,11 @@ what is being graded, not the choice.
 
 ### Red flags
 
-- Prompts before asking anything.
-- Accepts the first AI output without running it.
-- Cannot explain why the line breaks happen where they do.
+- Starts typing before asking anything.
+- Cannot explain why the line breaks land where they do.
 - Counts bytes and claims it is close enough for a UTF-8 input.
 - Infinite loop or crash on the long URL.
+- Side steps the long token by declaring it out of scope, then never returns to it.
 - No test, no manual verification.
 
 ### Scoring
@@ -112,7 +112,7 @@ what is being graded, not the choice.
 | Dimension         | 1 (weak)                    | 3 (solid)                              | 5 (strong)                                          |
 | ----------------- | --------------------------- | -------------------------------------- | --------------------------------------------------- |
 | Requirements      | none asked                  | covers wrap policy and limit semantics | anticipates the long-token and Unicode cases        |
-| Algorithm         | lets the AI decide          | picks greedy and justifies it          | compares options and rejects one with a reason      |
-| AI supervision    | blind paste                 | reads, runs, fixes one bug             | constrains the prompt, reviews, tests the edge cases |
+| Algorithm         | codes before deciding       | picks greedy and justifies it          | compares options and rejects one with a reason      |
 | Correctness       | fails the fixture           | passes except one edge case            | passes the whole fixture and explains each line      |
+| Edge cases        | long token unhandled        | handles it after prompting             | designs for it up front                             |
 | Communication     | silent                      | narrates choices                       | narrates, flags assumptions, asks for confirmation   |

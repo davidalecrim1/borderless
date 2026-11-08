@@ -1,7 +1,7 @@
 # Challenge 02 — Rate Limiter Package (Interviewer)
 
 **Time box:** 45 minutes
-**Mode:** design first, then implementation. AI may write the code; the design is the candidate's.
+**Mode:** AI-assisted. The design is the candidate's; the AI writes the code.
 
 ## Context
 

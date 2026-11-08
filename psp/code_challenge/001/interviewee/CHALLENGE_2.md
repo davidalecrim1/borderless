@@ -1,7 +1,7 @@
 # Challenge 02 — Rate Limiter Package
 
 **Time box:** 45 minutes
-**Mode:** design first, then implementation. AI may write the code; the design is yours.
+**Mode:** AI-assisted. The design is yours; the AI writes the code.
 
 ## Context
 
@@ -24,6 +24,12 @@ It will be consumed by other teams, so the public API matters as much as the imp
 - identify the caller from the JWT;
 - log the HTTP request;
 - apply the rate limit for that caller.
+
+## Rules
+
+- Ask questions before writing anything.
+- You own the design. The assistant only writes the code you ask for.
+- You are responsible for every line that lands in the file.
 
 ## Deliverables
 
