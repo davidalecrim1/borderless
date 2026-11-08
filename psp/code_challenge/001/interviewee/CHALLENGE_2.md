@@ -29,8 +29,12 @@ It will be consumed by other teams, so the public API matters as much as the imp
 ## Rules
 
 - Ask questions before writing anything.
-- You own the design. The assistant only writes the code you ask for.
-- You are responsible for every line that lands in the file.
+- Work with an AI coding assistant of your choice: Claude Code, Codex, OpenCode, Cursor, Copilot,
+  or whatever you already use day to day.
+- You own the design. The assistant writes the code you ask for; you decide what it should do and
+  why.
+- Read what it produces. You are responsible for every line that lands in the file, and if you
+  cannot explain a line, it does not count.
 
 ## Deliverables
 

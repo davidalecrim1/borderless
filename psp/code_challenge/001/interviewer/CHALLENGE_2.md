@@ -103,6 +103,9 @@ after the question is a fail.
 AI may write the whole implementation. That is allowed. What is not allowed is the candidate being
 unable to explain it.
 
+Let them use their own tool — Claude Code, Codex, OpenCode, Cursor, Copilot, whatever they work
+with. The choice of tool is not scored; how they drive it is.
+
 - Pick one function the AI produced at random and ask them to walk through it line by line.
 - Ask what they changed after the first generation and why.
 - Ask how they know it is correct, and what test they would write first.
