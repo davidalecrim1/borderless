@@ -1,123 +1,26 @@
 # Challenge 03 — Text Formatter (Interviewer)
 
 **Time box:** 15 minutes
-**Mode:** hand-written. No AI, no autocomplete. Documentation search only.
-**Language:** any. The choice is not scored.
 
-## Task
+## Questions
 
-Write code that formats a text so no line is longer than 30 characters.
+1. Before you write anything: what is still undefined? No questions, no pass.
+2. Thirty of what: runes, bytes, or display columns?
+3. Break on word boundaries, or cut anywhere?
+4. A token longer than 30 characters: break it, let it overflow, or hyphenate?
+5. Existing newlines: preserve them or reflow the whole text?
+6. Runs of spaces and trailing whitespace: collapse, keep, or trim?
+7. Why greedy wrapping and not balanced wrapping?
+8. Trace one output line by hand and count the characters for me.
+9. Run the fixture and show me the output. Which line do you expect to be wrong?
+10. Format the output a second time. Is it idempotent?
+11. The limit becomes configurable and the text is 2 GB. What changes?
 
-Input for this session:
+## Hidden Requirements
 
-```text
-Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin; lit. 'The Advancing Giant') is a Japanese manga series written and illustrated by Hajime Isayama. Set in a world where humanity is forced to live in cities surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans, the story follows Eren Yeager, an adolescent boy who vows to exterminate the Titans after they bring about the destruction of his hometown and the death of his mother.
-Eren and Zeke reunite, which leads them to the Paths—a series of atemporal gateways connecting all Eldians through time and space.
-Source: https://en.wikipedia.org/wiki/Attack_on_Titan
-```
-
-## Rules
-
-- Ask questions before writing anything.
-- The candidate chooses the algorithm.
-
-## Deliverables
-
-1. The code.
-2. The formatted output.
-3. A short explanation of the rules applied.
-
----
-
-## Interviewer notes
-
-### What this challenge measures
-
-Not the formatter. It measures whether the candidate can decompose an ambiguous requirement,
-decide an algorithm, and carry the edge cases through to working code without leaning on anyone
-else's judgement.
-
-### The gate
-
-The session must start with questions. Say so before the clock starts: silence here is not modesty,
-it is a signal. If the candidate starts typing in the first two minutes
-without asking what a "line" or a "character" means, stop them and ask: "Before you type, what is
-still undefined?" Their answer to that question is the first data point of the session.
-
-Documentation search means the language and standard library references only: no Stack Overflow,
-no code generators, no LLM.
-
-### Requirements the candidate should surface
-
-- 30 characters counted as runes, bytes, or display columns? (The fixture contains `進撃の巨人`.)
-- Wrap on word boundaries, or cut anywhere?
-- What happens to a single token longer than 30 characters? (The fixture contains a 45-character
-  URL.) Break it, allow overflow, or hyphenate?
-- Are existing newlines preserved, or is the whole input reflowed?
-- Are runs of spaces collapsed? Are they preserved as-is? Is whitespace at the line end trimmed?
-- Is exactly 30 allowed, or must every line be strictly shorter?
-- What is the output: string, slice of lines, file?
-
-Anything they leave undefined becomes a decision they make silently while coding.
-
-### The traps in the fixture
-
-| Trap                                     | What it exposes                                  |
-| ---------------------------------------- | ------------------------------------------------ |
-| The source URL at 45 characters          | unhandled infinite loop or silent overflow       |
-| `進撃の巨人` and the em dash              | byte counting versus rune counting               |
-| The hard newline before `Eren and Zeke`  | reflow versus preserve                           |
-| The parenthetical in the first sentence  | breaking inside a phrase the reader expects on one line |
-| `man-eating`                             | splitting on the hyphen versus treating it as one token |
-| The comma-heavy first sentence           | a splitter that treats punctuation as a word     |
-
-### Algorithm decision
-
-The candidate must choose and defend one:
-
-- Greedy word wrap (fill each line as far as possible): simple, standard, produces ragged but
-  predictable output.
-- Balanced wrap (minimise raggedness, dynamic programming): better looking, O(n^2) or O(n·w), more
-  code than the problem deserves.
-- Hard wrap by characters: trivial, breaks words and URLs, usually the wrong answer for prose.
-
-Ask "why" for whichever they pick. Greedy is almost always the right call here; the reasoning is
-what is being graded, not the choice.
-
-### Verification
-
-There is no test framework in the session. The candidate should still prove the output:
-
-- Trace one output line by hand, character by character, and confirm the count.
-- Run the fixture through their code before claiming it works.
-- State which case they expect to fail, if any.
-
-A candidate who says "it looks right" without executing or tracing has not finished.
-
-### Follow-ups
-
-1. "The limit is now configurable and the text is 2 GB. What changes?" Expected: streaming, bounded
-   buffer, no full-string allocation, careful with `strings.Split`.
-2. "The output must be idempotent: formatting the result again changes nothing." Does their
-   implementation satisfy it? The oversized-word handling usually breaks it.
-3. "Now the text is HTML and the line breaks must not land inside a tag." Scope check: does the
-   candidate say this needs a different approach rather than patching the wrapper?
-
-### Red flags
-
-- Starts typing before asking anything.
-- Cannot explain why the line breaks land where they do.
-- Counts bytes and claims it is close enough for a UTF-8 input.
-- Infinite loop or crash on the long URL.
-- Side steps the long token by declaring it out of scope, then never returns to it.
-- No test, no manual verification.
-
-### Scoring
-
-| Dimension         | 1 (weak)                    | 3 (solid)                              | 5 (strong)                                          |
-| ----------------- | --------------------------- | -------------------------------------- | --------------------------------------------------- |
-| Requirements      | none asked                  | covers wrap policy and limit semantics | anticipates the long-token and Unicode cases        |
-| Algorithm         | codes before deciding       | picks greedy and justifies it          | compares options and rejects one with a reason      |
-| Correctness       | fails the fixture           | passes except one edge case            | passes the whole fixture and explains each line      |
-| Edge cases        | long token unhandled        | handles it after prompting             | designs for it up front                             |
-| Communication     | silent                      | narrates choices                       | narrates, flags assumptions, asks for confirmation   |
+- 30 characters means runes or display columns, not bytes. The fixture contains `進撃の巨人`.
+- One token in the fixture is longer than the limit, and the behaviour must be defined before the
+  code exists.
+- The fixture also has an em dash, a hyphenated word, a hard newline, and a comma-heavy clause.
+- The candidate decides the algorithm from the requirements, not from a template.
+- The candidate verifies the output themselves; "it looks right" is not verification.
