@@ -38,8 +38,11 @@ It will be consumed by other teams, so the public API matters as much as the imp
 
 ### Shape of the session
 
-Minutes 0-10: requirements Q&A. Minutes 10-15: design on the whiteboard, no code. Minutes 15-40:
-implementation with the AI. Minutes 40-45: review and trade-offs.
+Minutes 0-8: requirements Q&A. Minutes 8-12: design on the whiteboard, no code. Minutes 12-27:
+implementation with the AI. Minutes 27-30: review and trade-offs.
+
+Open by saying questions are encouraged. The requirements block is where this challenge is won, and
+a candidate who treats it as a formality has already given away the strongest signal.
 
 If the candidate opens an editor before minute 12, interrupt and ask for the design first. The
 challenge is a design challenge disguised as a coding challenge.

@@ -28,7 +28,8 @@ It will be consumed by other teams, so the public API matters as much as the imp
 
 ## Rules
 
-- Ask questions before writing anything.
+- Ask questions before writing anything. Questions are encouraged, including ones that challenge
+  the requirements or the interviewer's assumptions.
 - Work with an AI coding assistant of your choice: Claude Code, Codex, OpenCode, Cursor, Copilot,
   or whatever you already use day to day.
 - You own the design. The assistant writes the code you ask for; you decide what it should do and

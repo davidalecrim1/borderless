@@ -38,7 +38,8 @@ else's judgement.
 
 ### The gate
 
-The session must start with questions. If the candidate starts typing in the first two minutes
+The session must start with questions. Say so before the clock starts: silence here is not modesty,
+it is a signal. If the candidate starts typing in the first two minutes
 without asking what a "line" or a "character" means, stop them and ask: "Before you type, what is
 still undefined?" Their answer to that question is the first data point of the session.
 

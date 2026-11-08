@@ -25,3 +25,4 @@ nums := []int{1, 5, 3, 3, 5, 1, 1, 5}
 - Working code.
 - A short explanation of your approach.
 - A short discussion about complexity.
+- Questions along the way. If something is unclear, ask; that is part of the exercise.

@@ -17,7 +17,8 @@ São Paulo's cluster — the one in us-east-1  — stayed green. Rollback window
 
 ## Rules
 
-- Ask questions before writing anything.
+- Ask questions before writing anything. The requirements are intentionally incomplete, and asking
+  is part of the exercise.
 - You choose the algorithm.
 
 ## Deliverables

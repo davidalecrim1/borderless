@@ -26,8 +26,9 @@ nums := []int{1, 5, 3, 3, 5, 1, 1, 5}
 
 ### Before the clock starts
 
-Do not clarify anything. Let the candidate read the four constraints and ask. If they ask nothing,
-that is data. Do not repeat the last two constraints.
+Tell the candidate up front that questions are encouraged and that you will answer the ones they
+ask. Then volunteer nothing: let them read the four constraints and ask. If they ask nothing, that
+is data. Do not repeat the last two constraints.
 
 Documentation search means the language and standard library references only: no Stack Overflow,
 no code generators, no LLM. State this up front and let them manage their own tabs.
