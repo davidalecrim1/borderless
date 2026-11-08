@@ -1,7 +1,7 @@
 # Challenge 03 — Text Formatter (Interviewer)
 
-**Time box:** 35 minutes
-**Mode:** hand-written. No AI, no autocomplete, no internet.
+**Time box:** 15 minutes
+**Mode:** hand-written. No AI, no autocomplete. Documentation search only.
 
 ## Task
 
@@ -40,6 +40,9 @@ else's judgement.
 The session must start with questions. If the candidate starts typing in the first two minutes
 without asking what a "line" or a "character" means, stop them and ask: "Before you type, what is
 still undefined?" Their answer to that question is the first data point of the session.
+
+Documentation search means the language and standard library references only: no Stack Overflow,
+no code generators, no LLM.
 
 ### Requirements the candidate should surface
 

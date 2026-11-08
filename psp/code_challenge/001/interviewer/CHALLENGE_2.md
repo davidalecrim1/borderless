@@ -1,6 +1,6 @@
 # Challenge 02 — Rate Limiter Package (Interviewer)
 
-**Time box:** 45 minutes
+**Time box:** 30 minutes
 **Mode:** AI-assisted. The design is the candidate's; the AI writes the code.
 
 ## Context

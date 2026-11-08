@@ -1,7 +1,7 @@
 # Challenge 01 — Distinct Elements
 
-**Time box:** 25 minutes
-**Mode:** hand-written. No AI, no autocomplete, no internet.
+**Time box:** 15 minutes
+**Mode:** hand-written. No AI, no autocomplete. Documentation search only.
 **Language:** any language you are comfortable with.
 
 ## Problem

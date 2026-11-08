@@ -1,7 +1,7 @@
 # Challenge 03 — Text Formatter
 
-**Time box:** 35 minutes
-**Mode:** hand-written. No AI, no autocomplete, no internet.
+**Time box:** 15 minutes
+**Mode:** hand-written. No AI, no autocomplete. Documentation search only.
 
 ## Task
 

@@ -1,7 +1,7 @@
 # Challenge 01 — Distinct Elements (Interviewer)
 
-**Time box:** 25 minutes
-**Mode:** hand-written. No AI, no autocomplete, no internet.
+**Time box:** 15 minutes
+**Mode:** hand-written. No AI, no autocomplete. Documentation search only.
 
 ## Problem
 
@@ -27,6 +27,9 @@ nums := []int{1, 5, 3, 3, 5, 1, 1, 5}
 
 Do not clarify anything. Let the candidate read the four constraints and ask. If they ask nothing,
 that is data. Do not repeat the last two constraints.
+
+Documentation search means the language and standard library references only: no Stack Overflow,
+no code generators, no LLM. State this up front and let them manage their own tabs.
 
 ### What you are evaluating
 
