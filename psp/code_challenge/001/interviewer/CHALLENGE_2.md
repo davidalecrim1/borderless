@@ -15,7 +15,7 @@
 
 ## Hidden Requirements
 
-- Chosen algorithmn to handle the rate limiter.
+- Chosen algorithm to handle the rate limiter.
 - The rate limiter should allow `100 requests/minute` for normal users and `1000 requests/minute` for premium users.
 - Deciding if the rate limiter will be for a single service (in memory) or across multiple services.
 - Atomic increment, or the check-then-set race corrupts the counter.
