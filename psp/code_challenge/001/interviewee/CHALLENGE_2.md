@@ -28,17 +28,12 @@ It will be consumed by other teams, so the public API matters as much as the imp
 
 ## Rules
 
-- Ask questions before writing anything. Questions are encouraged, including ones that challenge
-  the requirements or the interviewer's assumptions.
+- Share your thought process as you write the code and feel free to ask questions.
 - Work with an AI coding assistant of your choice: Claude Code, Codex, OpenCode, Cursor, Copilot,
   or whatever you already use day to day.
-- You own the design. The assistant writes the code you ask for; you decide what it should do and
-  why.
-- Read what it produces. You are responsible for every line that lands in the file, and if you
-  cannot explain a line, it does not count.
+- Think about the requirements and make sure you understand the problem and the solution.
 
 ## Deliverables
 
 1. The package: public API, configuration, and the limiting logic.
 2. The `GetTrades` service wiring the package.
-3. A short note on the trade-offs you made.

@@ -13,16 +13,6 @@ nums := []int{1, 5, 3, 3, 5, 1, 1, 5}
 // Output: 3
 ```
 
-## Constraints
+## Rules
 
-- `nums` can be empty.
-- Values fit in a signed 64-bit integer.
-- `nums` is not sorted.
-- The caller keeps using `nums` after the call.
-
-## What we expect
-
-- Working code.
-- A short explanation of your approach.
-- A short discussion about complexity.
-- Questions along the way. If something is unclear, ask; that is part of the exercise.
+- Share your thought process as you write the code and feel free to ask questions.

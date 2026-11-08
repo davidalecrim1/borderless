@@ -11,8 +11,9 @@ Write code that formats a text so no line is longer than 30 characters.
 Input for this session:
 
 ```text
-The migration ran for 41 minutes. psp-team reviewed https://api.borderless.dev/v1/trades?cursor=eyJpZCI6NDJ9 twice, then shipped it.
-São Paulo's cluster — the one in us-east-1  — stayed green. Rollback window: 30 minutes, no questions.
+Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin; lit. 'The Advancing Giant') is a Japanese manga series written and illustrated by Hajime Isayama. Set in a world where humanity is forced to live in cities surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans, the story follows Eren Yeager, an adolescent boy who vows to exterminate the Titans after they bring about the destruction of his hometown and the death of his mother.
+Eren and Zeke reunite, which leads them to the Paths—a series of atemporal gateways connecting all Eldians through time and space.
+Source: https://en.wikipedia.org/wiki/Attack_on_Titan
 ```
 
 ## Rules
@@ -48,10 +49,9 @@ no code generators, no LLM.
 
 ### Requirements the candidate should surface
 
-- 30 characters counted as runes, bytes, or display columns? (The fixture contains `São Paulo` and
-  an em dash.)
+- 30 characters counted as runes, bytes, or display columns? (The fixture contains `進撃の巨人`.)
 - Wrap on word boundaries, or cut anywhere?
-- What happens to a single token longer than 30 characters? (The fixture contains a 58-character
+- What happens to a single token longer than 30 characters? (The fixture contains a 45-character
   URL.) Break it, allow overflow, or hyphenate?
 - Are existing newlines preserved, or is the whole input reflowed?
 - Are runs of spaces collapsed? Are they preserved as-is? Is whitespace at the line end trimmed?
@@ -62,14 +62,14 @@ Anything they leave undefined becomes a decision they make silently while coding
 
 ### The traps in the fixture
 
-| Trap                                   | What it exposes                                  |
-| -------------------------------------- | ------------------------------------------------ |
-| The URL longer than 30 characters      | unhandled infinite loop or silent overflow       |
-| `São Paulo` and the em dash            | byte counting versus rune counting               |
-| Double space before the second dash    | whitespace normalisation never decided           |
-| The literal newline in the input       | reflow versus preserve                           |
-| `30 minutes` right at the boundary     | off-by-one on the limit                          |
-| Possessive `Paulo's`                   | a naive splitter that eats punctuation           |
+| Trap                                     | What it exposes                                  |
+| ---------------------------------------- | ------------------------------------------------ |
+| The source URL at 45 characters          | unhandled infinite loop or silent overflow       |
+| `進撃の巨人` and the em dash              | byte counting versus rune counting               |
+| The hard newline before `Eren and Zeke`  | reflow versus preserve                           |
+| The parenthetical in the first sentence  | breaking inside a phrase the reader expects on one line |
+| `man-eating`                             | splitting on the hyphen versus treating it as one token |
+| The comma-heavy first sentence           | a splitter that treats punctuation as a word     |
 
 ### Algorithm decision
 

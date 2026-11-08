@@ -11,18 +11,11 @@ Write code that formats a text so no line is longer than 30 characters.
 Input for this session:
 
 ```text
-The migration ran for 41 minutes. psp-team reviewed https://api.borderless.dev/v1/trades?cursor=eyJpZCI6NDJ9 twice, then shipped it.
-São Paulo's cluster — the one in us-east-1  — stayed green. Rollback window: 30 minutes, no questions.
+Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin; lit. 'The Advancing Giant') is a Japanese manga series written and illustrated by Hajime Isayama. Set in a world where humanity is forced to live in cities surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans, the story follows Eren Yeager, an adolescent boy who vows to exterminate the Titans after they bring about the destruction of his hometown and the death of his mother.
+Eren and Zeke reunite, which leads them to the Paths—a series of atemporal gateways connecting all Eldians through time and space.
+Source: https://en.wikipedia.org/wiki/Attack_on_Titan
 ```
 
 ## Rules
 
-- Ask questions before writing anything. The requirements are intentionally incomplete, and asking
-  is part of the exercise.
-- You choose the algorithm.
-
-## Deliverables
-
-1. The code.
-2. The formatted output.
-3. A short explanation of the rules you applied.
+- Share your thought process as you write the code and feel free to ask questions.
